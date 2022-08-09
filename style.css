@@ -1,0 +1,232 @@
+* {
+	padding: 0;
+	margin-right: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	list-style: none;
+	text-decoration: none;
+}
+body {
+    overflow-x: hidden;
+}
+.nav {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.logo {
+	margin: 20px 60px;
+	cursor: pointer;
+}
+select {
+    color: #db0ab9;
+    border: none;
+    outline: none;
+    margin: auto 20px;
+    font-size: 18px;
+}
+span {
+	display: block;
+    width: 300px;
+    margin-left: 100px;
+}
+span input {
+    font-size: 16px;
+    padding: 8px 10px;
+    outline: none;
+    margin: auto -1px;
+}
+#btn {
+    filter: invert(1);
+    width: 38px;
+    height: 38px;
+    position: absolute;
+    margin-left: -1px;
+    padding-top: 5px;
+}
+button img {
+	cursor: pointer;
+}
+.button a {
+	margin: auto 10px;
+	color: #db0ab9;
+	font-size: 17px;
+	font-weight: bold;
+}
+.button .btn-1 {
+	color: white;
+    background-color: #db0ab9;
+    padding: 10px 8px;
+    font-size: 16px;
+}
+.nav::after {
+	content: '';
+    position: absolute;
+    top: 85px;
+    width: 95%;
+    height: 2px;
+    background-color: #e8108e;
+}
+
+/* hero section means a main content point */
+#hero {
+	position: relative;
+    background: url(img/bg.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+.center {
+    display: flex;
+    justify-content: space-between;
+}
+.text {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transform: translate(-20%, -20%);
+}
+.text span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: max-content;
+    font-size: 28px;
+}
+.text h1 {
+	color: black;
+    backdrop-filter: contrast(0.5);
+    padding: 5px;
+}
+.text h2 {
+	color: blue;
+    backdrop-filter: contrast(0.5);
+    padding: 5px 8px;
+}
+.text p {
+    font-size: 17px;
+    margin: auto;
+    font-weight: 500;
+    line-height: 25px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+}
+.btn-2 {
+	color:  #db0ab9;
+    background-color: white;
+    padding: 18px;
+    font-size: 19px;
+    border: 2px solid #db0ab9;
+    margin-right: 15px;
+}
+.btn-3 {
+	color: white;
+    background-color: #db0ab9;
+    padding: 18px;
+    font-size: 19px;
+    border: 2px solid #db0ab9;
+}
+
+.img-sec {
+    position: absolute;
+    right: 100px;
+    top: -15px;
+}
+.img-sec img {
+	width: 400px;
+	max-width: 100%;
+}
+.img-sec::before {
+    content: url(img/icon.png);
+    position: absolute;
+    right: -130px;
+    width: 215px;
+}
+
+/* last portion of icons */
+
+.last {
+    background-color: grey;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    text-align: center;	
+}
+.last p {
+	padding: 10px;
+    font-size: 17px;
+    color: aliceblue;
+}
+.last strong {
+	color: #a91b1b;
+    font-size: 19px;
+}
+.last img {
+    max-width: 100%;
+    width: 200px;
+    height: 130px;
+    max-height: 100%;
+    padding: 10px;
+}
+
+
+/* At media query */
+
+@media only screen and (max-width: 1290px)
+{
+    .nav {
+        flex-wrap: wrap;
+    }
+    .nav::after {
+        top: 140px;
+    }
+}
+
+@media only screen and (max-width: 1110px)
+{
+.img-sec {
+    position: absolute;
+    top: 500px;
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+  .img-sec::before {
+    display: none;
+  }
+}
+
+
+    
+@media only screen and (max-width: 700px)
+{
+    .nav {
+        display: grid;
+    }
+    .nav::after {
+        top: 260px;
+    }
+    span {
+        width: auto;
+        margin-left: 25px;
+    }
+    span input {
+        border: 2px solid silver;
+    }
+    .button {
+            text-align: center;
+            margin: 20px auto;
+    }
+    .text span {
+        font-size: 18px;
+   }
+   .text p {
+    font-size: 12px;
+   }
+    .btn-2, .btn-3 {
+        padding: 10px;
+    }
+}
